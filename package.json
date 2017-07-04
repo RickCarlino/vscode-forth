@@ -1,26 +1,38 @@
 {
-    "name": "forth",
-    "displayName": "forth",
-    "description": "VS Code support for the Forth programming language.",
-    "version": "0.0.1",
-    "publisher": "rickcarlino",
-    "engines": {
-        "vscode": "^1.13.0"
-    },
-    "categories": [
-        "Languages"
+  "name": "forth",
+  "displayName": "forth",
+  "description": "VS Code support for the Forth programming language.",
+  "version": "0.0.1",
+  "publisher": "rickcarlino",
+  "publisherName": "rickcarlino",
+  "engines": {
+    "vscode": "^1.13.0"
+  },
+  "categories": [
+    "Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "forth",
+        "aliases": [
+          "Forth",
+          "forth"
+        ],
+        "extensions": [
+          ".fs",
+          ".4th",
+          ".fth"
+        ],
+        "configuration": "./language-configuration.json"
+      }
     ],
-    "contributes": {
-        "languages": [{
-            "id": "forth",
-            "aliases": ["Forth", "forth"],
-            "extensions": [".fs",".4th",".fth"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "forth",
-            "scopeName": "source.forth",
-            "path": "./syntaxes/forth.tmLanguage.json"
-        }]
-    }
+    "grammars": [
+      {
+        "language": "forth",
+        "scopeName": "source.forth",
+        "path": "./syntaxes/forth.tmLanguage.json"
+      }
+    ]
+  }
 }
